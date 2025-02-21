@@ -45,7 +45,7 @@ This project is an AI-powered Resume Processor API built with Express.js. It fet
    ```
 
 ## API Endpoints
-Use the postman collection for using the API endpoints
+Use the postman collection for using the API endpoints (resume.postman_collection.json) file 
 ### 1. Process Resume
 **POST** `/api/process`
 #### Request Body:
