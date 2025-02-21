@@ -40,33 +40,72 @@ This project is an AI-powered Resume Processor API built with Express.js. It fet
    ```
 4. Start the server:
    ```sh
+   npm build
    npm start
    ```
 
 ## API Endpoints
 
-### Process Resume
-**Endpoint:**
-```http
-POST /api/process
-```
-
-**Request Body:**
+### 1. Process Resume
+**POST** `/api/process`
+#### Request Body:
 ```json
 {
   "url": "https://example.com/resume.pdf"
 }
 ```
-
-**Response:**
+#### Response:
 ```json
 {
   "message": "Resume processed successfully",
   "data": {
     "name": "encrypted_value",
     "email": "encrypted_value",
-    "education": { "degree": "B.Tech", "branch": "CS", "institution": "XYZ University", "year": "2023" },
-    "experience": { "job_title": "Software Engineer", "company": "ABC Corp", "start_date": "2021", "end_date": "Present" },
+    "education": {
+      "degree": "B.Tech",
+      "branch": "CS",
+      "institution": "XYZ University",
+      "year": "2023"
+    },
+    "experience": {
+      "job_title": "Software Engineer",
+      "company": "ABC Corp",
+      "start_date": "2021",
+      "end_date": "Present"
+    },
+    "skills": ["JavaScript", "Node.js", "MongoDB"],
+    "summary": "Experienced software engineer..."
+  }
+}
+```
+
+### 2. Search for an Applicant
+**POST** `/api/search`
+#### Request Body:
+```json
+{
+  "name": "PRABHAT BHARDWAJ"
+}
+```
+#### Response:
+```json
+{
+  "message": "Resume processed successfully",
+  "data": {
+    "name": "encrypted_value",
+    "email": "encrypted_value",
+    "education": {
+      "degree": "B.Tech",
+      "branch": "CS",
+      "institution": "XYZ University",
+      "year": "2023"
+    },
+    "experience": {
+      "job_title": "Software Engineer",
+      "company": "ABC Corp",
+      "start_date": "2021",
+      "end_date": "Present"
+    },
     "skills": ["JavaScript", "Node.js", "MongoDB"],
     "summary": "Experienced software engineer..."
   }
